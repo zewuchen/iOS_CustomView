@@ -43,6 +43,16 @@
                                 <navigationItem title="Progress Circle" id="0lV-CS-8jA"/>
                             </items>
                         </navigationBar>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dTA-9A-4uH">
+                            <rect key="frame" x="0.0" y="506" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="MUDAR COR"/>
+                            <connections>
+                                <action selector="changeColor:" destination="5iR-vg-JBg" eventType="touchUpInside" id="L1g-vz-BM2"/>
+                            </connections>
+                        </button>
                         <sections>
                             <tableViewSection id="OAw-IP-XG8">
                                 <cells>
@@ -63,6 +73,22 @@
                                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GsI-Ld-weT" customClass="ProgressCircleView" customModule="CustomView" customModuleProvider="target">
                                                                     <rect key="frame" x="36" y="22" width="176" height="105"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pw8-sT-1VF">
+                                                                            <rect key="frame" x="61" y="36" width="55" height="12"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQJ-rp-rdQ">
+                                                                            <rect key="frame" x="64" y="56" width="49" height="12"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
@@ -259,6 +285,8 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Circle" image="cicle" selectedImage="cicleSelected" id="gtV-i6-qP3"/>
                     <connections>
+                        <outlet property="lblProgress" destination="tQJ-rp-rdQ" id="YYD-pt-BgH"/>
+                        <outlet property="lblTarget" destination="pw8-sT-1VF" id="dvK-qC-9Yf"/>
                         <outlet property="progressCircleView" destination="Y0j-bi-2ZE" id="RfR-EA-jIc"/>
                         <outlet property="progressCircleView2" destination="rbU-tq-6nY" id="foM-aT-Zmu"/>
                         <outlet property="progressCircleView3" destination="GsI-Ld-weT" id="8RM-HE-oOs"/>
@@ -287,6 +315,16 @@
                                 <navigationItem title="Progress Bar" id="LTi-Q1-m4k"/>
                             </items>
                         </navigationBar>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ggz-wI-fyd">
+                            <rect key="frame" x="0.0" y="506" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="MUDAR COR"/>
+                            <connections>
+                                <action selector="changeColor:" destination="ueR-Fi-SVc" eventType="touchUpInside" id="xJh-iv-dBq"/>
+                            </connections>
+                        </button>
                         <sections>
                             <tableViewSection id="kz8-Fk-2Jm">
                                 <cells>
@@ -299,6 +337,22 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJH-aF-Cu6" customClass="ProgressBarView" customModule="CustomView" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="8" width="414" height="192"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sa-mR-nR2">
+                                                            <rect key="frame" x="101" y="12" width="213" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Progress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5P-xo-WUo">
+                                                            <rect key="frame" x="101" y="41" width="213" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="progressColor">
@@ -449,6 +503,8 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Bar" image="line" selectedImage="lineSelected" id="jiV-6g-6wZ"/>
                     <connections>
+                        <outlet property="lblProgress" destination="M5P-xo-WUo" id="mUh-RY-hDi"/>
+                        <outlet property="lblTarget" destination="5sa-mR-nR2" id="qAL-cP-jZW"/>
                         <outlet property="progressBarView" destination="UJH-aF-Cu6" id="xVH-E8-spb"/>
                         <outlet property="progressSlider" destination="q0N-77-lDl" id="WC8-Qw-jDq"/>
                         <outlet property="targetSlider" destination="3AI-9Y-dSK" id="FbZ-Bf-pjp"/>
@@ -457,7 +513,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3l-0n-i4f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="848" y="-554"/>
+            <point key="canvasLocation" x="847.82608695652175" y="-554.46428571428567"/>
         </scene>
     </scenes>
     <resources>
